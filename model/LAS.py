@@ -18,7 +18,7 @@ import numpy as np
 # Step 2. Run through BLSTM
 # Note the input should have timestep%2 == 0
 class pBLSTMLayer(nn.Module):
-    def __init__(self,input_feature_dim,hidden_dim,rnn_unit='LSTM',dropout_rate=0.0):
+    def __init__(self, input_feature_dim, hidden_dim, rnn_unit='LSTM',dropout_rate=0.0):
         super(pBLSTMLayer, self).__init__()
         self.rnn_unit = getattr(nn,rnn_unit.upper())
 
